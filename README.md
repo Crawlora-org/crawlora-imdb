@@ -8,7 +8,7 @@ Official Crawlora client packages for the hosted IMDb API. These clients call Cr
 - Python: [`crawlora-imdb`](python/README.md)
 - Go: [`github.com/Crawlora-org/crawlora-imdb`](go.mod)
 - Ruby: [`crawlora-imdb`](ruby/README.md)
-- Java: [`net.crawlora:crawlora-imdb:0.1.0`](java/README.md)
+- Java: [`net.crawlora:crawlora-imdb:0.1.1`](java/README.md)
 - PHP: [`crawlora/imdb`](php/README.md)
 
 For installation and runnable examples, use the README for your language. See the [API endpoint and parameter reference](docs/usage.md) for shared operation details.

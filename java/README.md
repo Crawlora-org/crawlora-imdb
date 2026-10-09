@@ -8,7 +8,7 @@ The official Java client for Crawlora's hosted IMDb API. It calls Crawlora's hos
 <dependency>
   <groupId>net.crawlora</groupId>
   <artifactId>crawlora-imdb</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
 </dependency>
 ```
 

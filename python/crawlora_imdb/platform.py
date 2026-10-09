@@ -7,7 +7,7 @@ from .async_client import AsyncCrawloraClient
 class IMDbClient(CrawloraClient):
     """Synchronous IMDb API client."""
     def __init__(self, *args: Any, **kwargs: Any) -> None:
-        kwargs.setdefault('user_agent', 'crawlora-imdb-python/0.1.0')
+        kwargs.setdefault('user_agent', 'crawlora-imdb-python/0.1.1')
         super().__init__(*args, **kwargs)
 
     def charts(self, **params: Any) -> Any:
@@ -193,7 +193,7 @@ class IMDbClient(CrawloraClient):
 class AsyncIMDbClient(AsyncCrawloraClient):
     """Asynchronous IMDb API client."""
     def __init__(self, *args: Any, **kwargs: Any) -> None:
-        kwargs.setdefault('user_agent', 'crawlora-imdb-python/0.1.0')
+        kwargs.setdefault('user_agent', 'crawlora-imdb-python/0.1.1')
         super().__init__(*args, **kwargs)
 
     async def charts(self, **params: Any) -> Any:
