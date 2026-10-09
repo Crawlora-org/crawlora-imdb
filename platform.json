@@ -1,0 +1,23 @@
+{
+  "async_class_name": "AsyncIMDbClient",
+  "class_name": "IMDbClient",
+  "contract_revision": "sha256:2f96f0b8f5094ee2366e03038a2840bce6fbe2c09fb7d0ea464de89f1f42f013",
+  "display_name": "IMDb",
+  "general_sdk_version": "1.46.0-sdk.1",
+  "golang_module_name": "github.com/Crawlora-org/crawlora-imdb",
+  "golang_version": "0.1.0",
+  "group_name": "imdb",
+  "java_description": "Java client for Crawlora's hosted IMDb API, with title and name search, charts, ratings, credits, awards, episodes, reviews, images, and title metadata. Requires a Crawlora API key.",
+  "maven_artifact_id": "crawlora-imdb",
+  "maven_group_id": "net.crawlora",
+  "module_name": "crawlora_imdb",
+  "npm_name": "@crawlora-org/imdb",
+  "php_package_name": "crawlora/imdb",
+  "php_repository": "https://github.com/Crawlora-org/crawlora-imdb-php",
+  "platform": "imdb",
+  "python_name": "crawlora-imdb",
+  "repository": "https://github.com/Crawlora-org/crawlora-imdb",
+  "ruby_gem_name": "crawlora-imdb",
+  "source_contract_sha256": "6ce716c52b7f17a1ab0960cdaefaeb1b40b71c25ad41be55e80b8b0910624f9d",
+  "version": "0.1.0"
+}
