@@ -9,7 +9,7 @@ import {
 
 export class IMDbClient extends CrawloraClient {
   constructor(options = {}) {
-    super({ ...options, userAgent: options.userAgent ?? "crawlora-imdb-js/0.1.0" });
+    super({ ...options, userAgent: options.userAgent ?? "crawlora-imdb-js/0.1.1" });
     this["charts"] = (...args) => this.request("imdb-charts", ...args);
     this["imageTypes"] = (...args) => this.request("imdb-image-types", ...args);
     this["name"] = (...args) => this.request("imdb-name", ...args);
@@ -52,5 +52,5 @@ export {
   CrawloraServerError
 };
 export { groups, operations, operationCount, OperationIds } from "./operations.js";
-export const VERSION = "0.1.0";
+export const VERSION = "0.1.1";
 export default IMDbClient;
