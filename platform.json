@@ -13,7 +13,7 @@
   "module_name": "crawlora_imdb",
   "npm_name": "@crawlora-org/imdb",
   "php_package_name": "crawlora/imdb",
-  "php_repository": "https://github.com/Crawlora-org/crawlora-imdb-php",
+  "php_repository": "https://github.com/Crawlora-org/crawlora-imdb",
   "platform": "imdb",
   "python_name": "crawlora-imdb",
   "repository": "https://github.com/Crawlora-org/crawlora-imdb",
