@@ -1,6 +1,26 @@
 {
   "name": "crawlora/imdb",
-  "description": "IMDb client for the Crawlora hosted API",
+  "description": "Crawlora IMDb API client with 30 endpoints for title and name search, charts, ratings, credits, awards, episodes, reviews, images, and title metadata",
+  "keywords": [
+    "crawlora",
+    "api-client",
+    "sdk",
+    "web-scraping",
+    "scraping-api",
+    "imdb",
+    "imdb-api",
+    "imdb-scraper",
+    "imdb-data",
+    "imdb-title-name-search",
+    "imdb-charts",
+    "imdb-ratings",
+    "imdb-credits",
+    "imdb-awards",
+    "imdb-episodes",
+    "imdb-reviews",
+    "imdb-images",
+    "imdb-title-metadata"
+  ],
   "type": "library",
   "license": "MIT",
   "require": {

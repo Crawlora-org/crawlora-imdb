@@ -1,10 +1,10 @@
 {
   "name": "@crawlora-org/imdb",
-  "version": "0.1.1",
-  "description": "Typed JavaScript client for the Crawlora IMDb API",
+  "version": "0.1.2",
+  "description": "Crawlora IMDb API client with 30 endpoints for title and name search, charts, ratings, credits, awards, episodes, reviews, images, and title metadata",
   "homepage": "https://crawlora.net/?utm_source=npm&utm_medium=referral&utm_campaign=platform-clients&utm_content=imdb-javascript-homepage",
   "bugs": { "url": "https://github.com/Crawlora-org/crawlora-imdb/issues" },
-  "keywords": ["crawlora", "api-client", "web-scraping", "imdb", "typescript"],
+  "keywords": ["crawlora", "api-client", "sdk", "web-scraping", "scraping-api", "imdb", "imdb-api", "imdb-scraper", "imdb-data", "imdb-title-name-search", "imdb-charts", "imdb-ratings", "imdb-credits", "imdb-awards", "imdb-episodes", "imdb-reviews", "imdb-images", "imdb-title-metadata"],
   "type": "module",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
