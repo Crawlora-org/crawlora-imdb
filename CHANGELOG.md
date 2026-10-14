@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0 — 2026-10-14
+
+- Updated operation contracts: imdb-charts, imdb-name, imdb-name-awards, imdb-name-credits, imdb-search, imdb-search-title, imdb-title, imdb-title-awards, imdb-title-company-credits, imdb-title-credits, imdb-title-episodes, imdb-title-filming-locations, imdb-title-goofs, imdb-title-keywords, imdb-title-parental-guide, imdb-title-public-facts-analysis, imdb-title-quotes, imdb-title-release-info, imdb-title-reviews, imdb-title-similar, imdb-title-technical-specs, imdb-title-trivia.
+
 ## 0.1.2 — 2026-10-12
 
 - List every supported endpoint in the repository and package READMEs.

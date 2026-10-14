@@ -8,7 +8,7 @@ The official Java client for Crawlora's hosted IMDb API. It exposes 30 endpoints
 <dependency>
   <groupId>net.crawlora</groupId>
   <artifactId>crawlora-imdb</artifactId>
-  <version>0.1.2</version>
+  <version>0.2.0</version>
 </dependency>
 ```
 

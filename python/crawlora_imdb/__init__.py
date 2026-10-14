@@ -6,10 +6,10 @@ from .operations import OPERATION_COUNT, OPERATION_IDS, PLATFORM
 
 Client = IMDbClient
 AsyncClient = AsyncIMDbClient
-__version__ = '0.1.2'
+__version__ = '0.2.0'
 DISPLAY_NAME = 'IMDb'
 PLATFORM = 'imdb'
-CONTRACT_REVISION = 'sha256:2f96f0b8f5094ee2366e03038a2840bce6fbe2c09fb7d0ea464de89f1f42f013'
+CONTRACT_REVISION = 'sha256:3377b774bff0bdc3a1939c8a81b9d62c3a2e846a741435145586f6cc3885396c'
 
 __all__ = [
     "IMDbClient", "AsyncIMDbClient", "Client", "AsyncClient",

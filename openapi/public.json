@@ -20,14 +20,17 @@
     "imdb.AlternateTitle": {
       "properties": {
         "country": {
+          "description": "Country or region the alternate title is used in.",
           "example": "United States",
           "type": "string"
         },
         "title": {
+          "description": "Alternate title as listed for that country.",
           "example": "Inception",
           "type": "string"
         },
         "type": {
+          "description": "Kind of alternate title, when IMDb gives one.",
           "example": "original title",
           "type": "string"
         }
@@ -37,41 +40,50 @@
     "imdb.AwardItem": {
       "properties": {
         "award": {
+          "description": "Name of the award given, for example `Oscar`.",
           "example": "Oscar",
           "type": "string"
         },
         "category": {
+          "description": "Award category, for example `Best Motion Picture of the Year`.",
           "example": "Best Motion Picture of the Year",
           "type": "string"
         },
         "event": {
+          "description": "Name of the awards event, for example `Academy Awards, USA`.",
           "example": "Academy Awards, USA",
           "type": "string"
         },
         "notes": {
+          "description": "Extra note IMDb attaches to the award entry.",
           "type": "string"
         },
         "public_signals": {
+          "description": "Number of details filled in on this entry, counted across event, year, category, result, award, recipients, titles and notes.",
           "example": 6,
           "type": "integer"
         },
         "recipients": {
+          "description": "People who received the award.",
           "items": {
             "$ref": "#/definitions/imdb.Person"
           },
           "type": "array"
         },
         "result": {
+          "description": "Outcome of the entry, for example `nomination`.",
           "example": "nomination",
           "type": "string"
         },
         "titles": {
+          "description": "Titles the award entry refers to.",
           "items": {
             "$ref": "#/definitions/imdb.AwardTitle"
           },
           "type": "array"
         },
         "year": {
+          "description": "Year of the award entry, for example `2011`.",
           "example": "2011",
           "type": "string"
         }
@@ -81,14 +93,17 @@
     "imdb.AwardTitle": {
       "properties": {
         "id": {
+          "description": "IMDb title ID, for example `tt1375666`.",
           "example": "tt1375666",
           "type": "string"
         },
         "title": {
+          "description": "Name of the title the award entry refers to.",
           "example": "Inception",
           "type": "string"
         },
         "url": {
+          "description": "IMDb page URL of the title.",
           "example": "https://www.imdb.com/title/tt1375666/",
           "type": "string"
         }
@@ -176,18 +191,22 @@
     "imdb.CompanyItem": {
       "properties": {
         "name": {
+          "description": "Company name as listed on IMDb.",
           "example": "Warner Bros.",
           "type": "string"
         },
         "note": {
+          "description": "Note shown next to the company, for example `presents`.",
           "example": "presents",
           "type": "string"
         },
         "public_signals": {
+          "description": "Number of details filled in on this entry, counted across name, URL and note.",
           "example": 2,
           "type": "integer"
         },
         "url": {
+          "description": "IMDb page URL of the company.",
           "example": "https://www.imdb.com/company/co0002663/",
           "type": "string"
         }
@@ -197,16 +216,19 @@
     "imdb.CompanySection": {
       "properties": {
         "companies": {
+          "description": "Companies listed in this section.",
           "items": {
             "$ref": "#/definitions/imdb.CompanyItem"
           },
           "type": "array"
         },
         "name": {
+          "description": "Section heading, for example `Production Companies`.",
           "example": "Production Companies",
           "type": "string"
         },
         "slug": {
+          "description": "Lowercase, hyphenated form of the section name, for example `production-companies`.",
           "example": "production-companies",
           "type": "string"
         }
@@ -336,41 +358,51 @@
     "imdb.EpisodeItem": {
       "properties": {
         "air_date": {
+          "description": "Air date as IMDb shows it, for example `17 Apr 2011`, or just the year when only that is known. Omitted when IMDb has no date.",
           "example": "17 Apr 2011",
           "type": "string"
         },
         "episode": {
+          "description": "Episode number within the season.",
           "example": 1,
           "type": "integer"
         },
         "id": {
+          "description": "IMDb title ID of the episode.",
           "example": "tt1480055",
           "type": "string"
         },
         "plot": {
+          "description": "Plot summary of the episode.",
           "type": "string"
         },
         "public_signals": {
+          "description": "Number of details filled in on this episode, counted across title, season, episode number, rating, vote count and plot.",
           "example": 6,
           "type": "integer"
         },
         "rating_count": {
+          "description": "Number of votes behind the episode rating.",
           "example": 52000,
           "type": "integer"
         },
         "rating_value": {
+          "description": "Average IMDb user rating of the episode.",
           "example": 8.9,
           "type": "number"
         },
         "season": {
+          "description": "Season number of the episode.",
           "example": 1,
           "type": "integer"
         },
         "title": {
+          "description": "Title of the episode as shown on IMDb.",
           "example": "Winter Is Coming",
           "type": "string"
         },
         "url": {
+          "description": "IMDb page URL of the episode.",
           "example": "https://www.imdb.com/title/tt1480055/",
           "type": "string"
         }
@@ -380,44 +412,54 @@
     "imdb.EpisodesResponse": {
       "properties": {
         "episodes": {
+          "description": "Episodes of the requested season, or of the first season when none was requested.",
           "items": {
             "$ref": "#/definitions/imdb.EpisodeItem"
           },
           "type": "array"
         },
         "fetched_at": {
+          "description": "Time the data was fetched, in UTC (RFC 3339).",
           "example": "2026-06-07T14:46:16Z",
           "type": "string"
         },
         "has_more": {
+          "description": "`true` when IMDb lists more episodes for the season than were returned.",
           "example": true,
           "type": "boolean"
         },
         "id": {
+          "description": "IMDb title ID of the series, for example `tt0944947`.",
           "example": "tt0944947",
           "type": "string"
         },
         "limit": {
+          "description": "Maximum number of episodes requested.",
           "example": 10,
           "type": "integer"
         },
         "public_page_derived": {
+          "description": "Always `true`. The data comes from IMDb's public pages.",
           "example": true,
           "type": "boolean"
         },
         "season": {
+          "description": "Season number that was requested. Omitted when no season was requested.",
           "example": 1,
           "type": "integer"
         },
         "source_url": {
+          "description": "URL the data was read from.",
           "example": "https://www.imdb.com/title/tt0944947/episodes/?season=1",
           "type": "string"
         },
         "total": {
+          "description": "Number of episodes IMDb lists for the season.",
           "example": 11,
           "type": "integer"
         },
         "url": {
+          "description": "IMDb episodes page of the series.",
           "example": "https://www.imdb.com/title/tt0944947/episodes/",
           "type": "string"
         }
@@ -604,14 +646,17 @@
     "imdb.KeywordItem": {
       "properties": {
         "keyword": {
+          "description": "Keyword IMDb has tagged the title with.",
           "example": "dream",
           "type": "string"
         },
         "public_signals": {
+          "description": "Number of details filled in on this entry, counted across keyword and URL.",
           "example": 2,
           "type": "integer"
         },
         "url": {
+          "description": "IMDb page that lists titles with this keyword.",
           "example": "https://www.imdb.com/search/keyword/?keywords=dream",
           "type": "string"
         }
@@ -635,14 +680,17 @@
     "imdb.LocationItem": {
       "properties": {
         "location": {
+          "description": "Filming location name, for example `Paris, France`.",
           "example": "Paris, France",
           "type": "string"
         },
         "note": {
+          "description": "Note IMDb adds about the location, such as the scene shot there.",
           "example": "Ariadne learns to build dreams",
           "type": "string"
         },
         "public_signals": {
+          "description": "Number of details filled in on this entry, counted across location and note.",
           "example": 2,
           "type": "integer"
         }
@@ -665,36 +713,44 @@
     "imdb.NameAwardsResponse": {
       "properties": {
         "awards": {
+          "description": "Award entries IMDb lists for the person.",
           "items": {
             "$ref": "#/definitions/imdb.AwardItem"
           },
           "type": "array"
         },
         "fetched_at": {
+          "description": "Time the data was fetched, in UTC (RFC 3339).",
           "example": "2026-06-07T14:46:16Z",
           "type": "string"
         },
         "has_more": {
+          "description": "`true` when IMDb lists more award entries than were returned.",
           "example": true,
           "type": "boolean"
         },
         "id": {
+          "description": "IMDb name ID of the person, for example `nm0634240`.",
           "example": "nm0634240",
           "type": "string"
         },
         "public_page_derived": {
+          "description": "Always `true`. The data comes from IMDb's public pages.",
           "example": true,
           "type": "boolean"
         },
         "source_url": {
+          "description": "URL the data was read from.",
           "example": "https://www.imdb.com/name/nm0634240/awards/",
           "type": "string"
         },
         "total": {
+          "description": "Number of award entries IMDb lists for the person.",
           "example": 64,
           "type": "integer"
         },
         "url": {
+          "description": "IMDb awards page of the person.",
           "example": "https://www.imdb.com/name/nm0634240/awards/",
           "type": "string"
         }
@@ -704,26 +760,32 @@
     "imdb.NameCreditItem": {
       "properties": {
         "episodes": {
+          "description": "Number of episodes the person is credited on, as IMDb words it, for example `3 episodes`.",
           "example": "3 episodes",
           "type": "string"
         },
         "id": {
+          "description": "IMDb title ID of the credited title.",
           "example": "tt1375666",
           "type": "string"
         },
         "role": {
+          "description": "Role or character credited for the person on the title, for example `Self`.",
           "example": "directed by",
           "type": "string"
         },
         "title": {
+          "description": "Name of the credited title.",
           "example": "Inception",
           "type": "string"
         },
         "url": {
+          "description": "IMDb page URL of the credited title.",
           "example": "https://www.imdb.com/title/tt1375666/",
           "type": "string"
         },
         "year": {
+          "description": "Release year of the credited title.",
           "example": "2010",
           "type": "string"
         }
@@ -733,24 +795,29 @@
     "imdb.NameCreditSection": {
       "properties": {
         "credits": {
+          "description": "Credits the person has in this section.",
           "items": {
             "$ref": "#/definitions/imdb.NameCreditItem"
           },
           "type": "array"
         },
         "has_more": {
+          "description": "`true` when IMDb lists more credits in this section than were returned.",
           "example": true,
           "type": "boolean"
         },
         "name": {
+          "description": "Section heading, usually the job, for example `Director`.",
           "example": "Director",
           "type": "string"
         },
         "slug": {
+          "description": "Lowercase, hyphenated form of the section name, for example `director`.",
           "example": "director",
           "type": "string"
         },
         "total": {
+          "description": "Number of credits IMDb lists in this section.",
           "example": 152,
           "type": "integer"
         }
@@ -760,28 +827,34 @@
     "imdb.NameCreditsResponse": {
       "properties": {
         "fetched_at": {
+          "description": "Time the data was fetched, in UTC (RFC 3339).",
           "example": "2026-06-07T14:46:16Z",
           "type": "string"
         },
         "id": {
+          "description": "IMDb name ID of the person, for example `nm0634240`.",
           "example": "nm0634240",
           "type": "string"
         },
         "public_page_derived": {
+          "description": "Always `true`. The data comes from IMDb's public pages.",
           "example": true,
           "type": "boolean"
         },
         "sections": {
+          "description": "Credits of the person, grouped by job.",
           "items": {
             "$ref": "#/definitions/imdb.NameCreditSection"
           },
           "type": "array"
         },
         "source_url": {
+          "description": "URL the data was read from.",
           "example": "https://www.imdb.com/name/nm0634240/",
           "type": "string"
         },
         "url": {
+          "description": "IMDb page URL of the person.",
           "example": "https://www.imdb.com/name/nm0634240/",
           "type": "string"
         }
@@ -846,22 +919,27 @@
     "imdb.NameKnownForItem": {
       "properties": {
         "category": {
+          "description": "Credit category of the person on this title, for example `Director`.",
           "example": "Director",
           "type": "string"
         },
         "id": {
+          "description": "IMDb title ID of the title.",
           "example": "tt1375666",
           "type": "string"
         },
         "title": {
+          "description": "Name of the title.",
           "example": "Inception",
           "type": "string"
         },
         "url": {
+          "description": "IMDb page URL of the title.",
           "example": "https://www.imdb.com/title/tt1375666/",
           "type": "string"
         },
         "year": {
+          "description": "Release year of the title.",
           "example": "2010",
           "type": "string"
         }
@@ -871,55 +949,68 @@
     "imdb.NameResponse": {
       "properties": {
         "bio": {
+          "description": "Full biography text of the person.",
           "type": "string"
         },
         "birth_date": {
+          "description": "Date of birth as `YYYY-MM-DD`, or `YYYY-MM` or `YYYY` when IMDb records only part of it.",
           "example": "1970-07-30",
           "type": "string"
         },
         "birth_place": {
+          "description": "Place of birth, for example `London, England, UK`.",
           "example": "London, England, UK",
           "type": "string"
         },
         "death_date": {
+          "description": "Date of death as `YYYY-MM-DD`, or `YYYY-MM` or `YYYY` when IMDb records only part of it.",
           "type": "string"
         },
         "fetched_at": {
+          "description": "Time the data was fetched, in UTC (RFC 3339).",
           "example": "2026-06-07T14:46:16Z",
           "type": "string"
         },
         "id": {
+          "description": "IMDb name ID of the person, for example `nm0634240`.",
           "example": "nm0634240",
           "type": "string"
         },
         "image_url": {
+          "description": "URL of the person's main photo.",
           "type": "string"
         },
         "known_for": {
+          "description": "Titles IMDb lists the person as known for.",
           "items": {
             "$ref": "#/definitions/imdb.NameKnownForItem"
           },
           "type": "array"
         },
         "name": {
+          "description": "Name of the person as shown on IMDb.",
           "example": "Christopher Nolan",
           "type": "string"
         },
         "professions": {
+          "description": "Professions IMDb lists for the person.",
           "items": {
             "type": "string"
           },
           "type": "array"
         },
         "public_page_derived": {
+          "description": "Always `true`. The data comes from IMDb's public pages.",
           "example": true,
           "type": "boolean"
         },
         "source_url": {
+          "description": "URL the data was read from.",
           "example": "https://www.imdb.com/name/nm0634240/",
           "type": "string"
         },
         "url": {
+          "description": "IMDb page URL of the person.",
           "example": "https://www.imdb.com/name/nm0634240/",
           "type": "string"
         }
@@ -992,20 +1083,24 @@
     "imdb.ParentalGuideCategory": {
       "properties": {
         "items": {
+          "description": "Guide entries for this category. Entries IMDb files as spoilers are not included.",
           "items": {
             "type": "string"
           },
           "type": "array"
         },
         "name": {
+          "description": "Category name, for example `Violence & Gore`.",
           "example": "Violence & Gore",
           "type": "string"
         },
         "severity": {
+          "description": "Community severity vote: `none`, `mild`, `moderate` or `severe`. Omitted when IMDb has no vote.",
           "example": "moderate",
           "type": "string"
         },
         "slug": {
+          "description": "Lowercase, hyphenated form of the category name, for example `violence-gore`.",
           "example": "violence-gore",
           "type": "string"
         }
@@ -1015,31 +1110,42 @@
     "imdb.ParentalGuideResponse": {
       "properties": {
         "categories": {
+          "description": "Parental guide categories IMDb lists for the title.",
           "items": {
             "$ref": "#/definitions/imdb.ParentalGuideCategory"
           },
           "type": "array"
         },
         "fetched_at": {
+          "description": "Time the data was fetched, in UTC (RFC 3339).",
           "example": "2026-06-07T14:46:16Z",
           "type": "string"
         },
         "id": {
+          "description": "IMDb title ID, for example `tt1375666`.",
           "example": "tt1375666",
           "type": "string"
         },
         "public_page_derived": {
+          "description": "Always `true`. The data comes from IMDb's public pages.",
           "example": true,
           "type": "boolean"
         },
         "source_url": {
+          "description": "URL the data was read from.",
           "example": "https://www.imdb.com/title/tt1375666/parentalguide/",
           "type": "string"
         },
         "summary": {
-          "$ref": "#/definitions/imdb.ParentalGuideSummary"
+          "allOf": [
+            {
+              "$ref": "#/definitions/imdb.ParentalGuideSummary"
+            }
+          ],
+          "description": "Counts and highest severity across all returned categories."
         },
         "url": {
+          "description": "IMDb parental guide page of the title.",
           "example": "https://www.imdb.com/title/tt1375666/parentalguide/",
           "type": "string"
         }
@@ -1049,24 +1155,29 @@
     "imdb.ParentalGuideSummary": {
       "properties": {
         "categories_count": {
+          "description": "Number of guide categories returned.",
           "example": 5,
           "type": "integer"
         },
         "highest_severity": {
+          "description": "Highest severity among the categories: `none`, `mild`, `moderate` or `severe`.",
           "example": "severe",
           "type": "string"
         },
         "item_count": {
+          "description": "Total number of guide entries across all categories.",
           "example": 24,
           "type": "integer"
         },
         "present_categories": {
+          "description": "Slugs of the categories returned.",
           "items": {
             "type": "string"
           },
           "type": "array"
         },
         "public_page_signals": {
+          "description": "Count of details in the guide: entries, named categories and categories that have a severity.",
           "example": 12,
           "type": "integer"
         },
@@ -1074,6 +1185,7 @@
           "additionalProperties": {
             "type": "integer"
           },
+          "description": "Number of categories at each severity level, keyed by severity.",
           "type": "object"
         }
       },
@@ -1082,10 +1194,12 @@
     "imdb.Person": {
       "properties": {
         "name": {
+          "description": "Name of the person.",
           "example": "Christopher Nolan",
           "type": "string"
         },
         "url": {
+          "description": "IMDb page URL of the person.",
           "example": "https://www.imdb.com/name/nm0634240/",
           "type": "string"
         }
@@ -1100,14 +1214,17 @@
           "type": "string"
         },
         "public_signals": {
+          "description": "Number of details filled in on this entry, counted across text and spoiler marker.",
           "example": 1,
           "type": "integer"
         },
         "spoiler": {
+          "description": "`true` when IMDb marks the entry as a spoiler.",
           "example": false,
           "type": "boolean"
         },
         "text": {
+          "description": "Text of the trivia, goof or quote entry.",
           "example": "The hallway fight was filmed with a rotating set.",
           "type": "string"
         }
@@ -1225,14 +1342,17 @@
     "imdb.ReleaseInfoItem": {
       "properties": {
         "country": {
+          "description": "Country or region of the release.",
           "example": "United States",
           "type": "string"
         },
         "date": {
+          "description": "Release date as IMDb shows it, for example `16 July 2010`.",
           "example": "16 July 2010",
           "type": "string"
         },
         "note": {
+          "description": "Note on the release, for example `theatrical`.",
           "example": "theatrical",
           "type": "string"
         }
@@ -1242,46 +1362,56 @@
     "imdb.ReleaseInfoResponse": {
       "properties": {
         "alternate_titles": {
+          "description": "Alternate titles (also known as) IMDb lists for the title.",
           "items": {
             "$ref": "#/definitions/imdb.AlternateTitle"
           },
           "type": "array"
         },
         "alternate_titles_total": {
+          "description": "Number of alternate titles IMDb lists for the title.",
           "example": 82,
           "type": "integer"
         },
         "fetched_at": {
+          "description": "Time the data was fetched, in UTC (RFC 3339).",
           "example": "2026-06-07T14:46:16Z",
           "type": "string"
         },
         "has_more": {
+          "description": "`true` when IMDb lists more release dates than were returned.",
           "example": true,
           "type": "boolean"
         },
         "id": {
+          "description": "IMDb title ID, for example `tt1375666`.",
           "example": "tt1375666",
           "type": "string"
         },
         "public_page_derived": {
+          "description": "Always `true`. The data comes from IMDb's public pages.",
           "example": true,
           "type": "boolean"
         },
         "releases": {
+          "description": "Release dates of the title by country.",
           "items": {
             "$ref": "#/definitions/imdb.ReleaseInfoItem"
           },
           "type": "array"
         },
         "source_url": {
+          "description": "URL the data was read from.",
           "example": "https://www.imdb.com/title/tt1375666/releaseinfo/",
           "type": "string"
         },
         "total": {
+          "description": "Number of release dates IMDb lists for the title.",
           "example": 71,
           "type": "integer"
         },
         "url": {
+          "description": "IMDb release info page of the title.",
           "example": "https://www.imdb.com/title/tt1375666/releaseinfo/",
           "type": "string"
         }
@@ -1291,49 +1421,61 @@
     "imdb.ReviewItem": {
       "properties": {
         "author": {
+          "description": "Username of the reviewer.",
           "example": "movie_fan",
           "type": "string"
         },
         "date": {
+          "description": "Date the review was posted, for example `2024-01-02`.",
           "example": "2024-01-02",
           "type": "string"
         },
         "helpful_votes": {
+          "description": "Number of users who marked the review as helpful.",
           "example": 123,
           "type": "integer"
         },
         "helpfulness": {
+          "description": "Share of votes that marked the review as helpful, as a percentage such as `82%`.",
           "example": "82%",
           "type": "string"
         },
         "id": {
+          "description": "IMDb review ID, for example `rw1234567`.",
           "example": "rw1234567",
           "type": "string"
         },
         "public_signals": {
+          "description": "Number of details filled in on this review, counted across title, author, date, rating, text and votes.",
           "example": 5,
           "type": "integer"
         },
         "rating": {
+          "description": "Rating the reviewer gave the title.",
           "example": 9,
           "type": "integer"
         },
         "spoiler": {
+          "description": "`true` when the review is marked as containing spoilers.",
           "example": false,
           "type": "boolean"
         },
         "text": {
+          "description": "Full text of the review.",
           "type": "string"
         },
         "title": {
+          "description": "Headline the reviewer gave the review.",
           "example": "A smart blockbuster",
           "type": "string"
         },
         "total_votes": {
+          "description": "Total number of helpful and not helpful votes the review received.",
           "example": 150,
           "type": "integer"
         },
         "url": {
+          "description": "IMDb page URL of the review.",
           "example": "https://www.imdb.com/review/rw1234567/",
           "type": "string"
         }
@@ -1343,40 +1485,49 @@
     "imdb.ReviewsResponse": {
       "properties": {
         "fetched_at": {
+          "description": "Time the data was fetched, in UTC (RFC 3339).",
           "example": "2026-06-07T14:46:16Z",
           "type": "string"
         },
         "has_more": {
+          "description": "`true` when IMDb lists more reviews than were returned.",
           "example": true,
           "type": "boolean"
         },
         "id": {
+          "description": "IMDb title ID, for example `tt1375666`.",
           "example": "tt1375666",
           "type": "string"
         },
         "limit": {
+          "description": "Maximum number of reviews requested.",
           "example": 10,
           "type": "integer"
         },
         "public_page_derived": {
+          "description": "Always `true`. The data comes from IMDb's public pages.",
           "example": true,
           "type": "boolean"
         },
         "reviews": {
+          "description": "User reviews of the title.",
           "items": {
             "$ref": "#/definitions/imdb.ReviewItem"
           },
           "type": "array"
         },
         "source_url": {
+          "description": "URL the data was read from.",
           "example": "https://www.imdb.com/title/tt1375666/reviews/",
           "type": "string"
         },
         "total": {
+          "description": "Number of reviews IMDb lists for the title.",
           "example": 11940,
           "type": "integer"
         },
         "url": {
+          "description": "IMDb reviews page of the title.",
           "example": "https://www.imdb.com/title/tt1375666/reviews/",
           "type": "string"
         }
@@ -1386,28 +1537,35 @@
     "imdb.SearchItem": {
       "properties": {
         "description": {
+          "description": "Lead cast of the title, when IMDb shows it.",
           "type": "string"
         },
         "id": {
+          "description": "IMDb title ID, for example `tt1375666`.",
           "example": "tt1375666",
           "type": "string"
         },
         "image_url": {
+          "description": "URL of the image IMDb shows for the title in search results.",
           "type": "string"
         },
         "title": {
+          "description": "Title name as shown in search results.",
           "example": "Inception",
           "type": "string"
         },
         "title_type": {
+          "description": "Kind of title, for example `Movie`.",
           "example": "Movie",
           "type": "string"
         },
         "url": {
+          "description": "IMDb page URL of the title.",
           "example": "https://www.imdb.com/title/tt1375666/",
           "type": "string"
         },
         "year": {
+          "description": "Release year of the title.",
           "example": "2010",
           "type": "string"
         }
@@ -1417,24 +1575,29 @@
     "imdb.SearchResponse": {
       "properties": {
         "fetched_at": {
+          "description": "Time the data was fetched, in UTC (RFC 3339).",
           "example": "2026-06-07T14:46:16Z",
           "type": "string"
         },
         "limit": {
+          "description": "Maximum number of results requested.",
           "example": 10,
           "type": "integer"
         },
         "query": {
+          "description": "Search query that was run.",
           "example": "inception",
           "type": "string"
         },
         "results": {
+          "description": "Titles matching the query.",
           "items": {
             "$ref": "#/definitions/imdb.SearchItem"
           },
           "type": "array"
         },
         "source_url": {
+          "description": "URL the data was read from.",
           "example": "https://www.imdb.com/find/?q=inception&s=tt",
           "type": "string"
         }
@@ -1597,14 +1760,17 @@
     "imdb.TechnicalSpecItem": {
       "properties": {
         "name": {
+          "description": "Name of the technical spec, for example `Runtime`.",
           "example": "Runtime",
           "type": "string"
         },
         "slug": {
+          "description": "Lowercase, hyphenated form of the spec name, for example `runtime`.",
           "example": "runtime",
           "type": "string"
         },
         "values": {
+          "description": "Values IMDb lists for the spec.",
           "items": {
             "type": "string"
           },
@@ -1616,28 +1782,34 @@
     "imdb.TechnicalSpecsResponse": {
       "properties": {
         "fetched_at": {
+          "description": "Time the data was fetched, in UTC (RFC 3339).",
           "example": "2026-06-07T14:46:16Z",
           "type": "string"
         },
         "id": {
+          "description": "IMDb title ID, for example `tt1375666`.",
           "example": "tt1375666",
           "type": "string"
         },
         "public_page_derived": {
+          "description": "Always `true`. The data comes from IMDb's public pages.",
           "example": true,
           "type": "boolean"
         },
         "source_url": {
+          "description": "URL the data was read from.",
           "example": "https://www.imdb.com/title/tt1375666/technical/",
           "type": "string"
         },
         "specs": {
+          "description": "Technical specifications IMDb lists for the title.",
           "items": {
             "$ref": "#/definitions/imdb.TechnicalSpecItem"
           },
           "type": "array"
         },
         "url": {
+          "description": "IMDb technical specs page of the title.",
           "example": "https://www.imdb.com/title/tt1375666/technical/",
           "type": "string"
         }
@@ -1868,58 +2040,70 @@
     "imdb.TitlePublicFactsResponse": {
       "properties": {
         "company_credits": {
+          "description": "Company credits grouped by section. Filled when `type` is `company_credits`.",
           "items": {
             "$ref": "#/definitions/imdb.CompanySection"
           },
           "type": "array"
         },
         "facts": {
+          "description": "Trivia, goof or quote entries. Filled when `type` is `trivia`, `goofs` or `quotes`.",
           "items": {
             "$ref": "#/definitions/imdb.PublicFactItem"
           },
           "type": "array"
         },
         "fetched_at": {
+          "description": "Time the data was fetched, in UTC (RFC 3339).",
           "example": "2026-06-07T14:46:16Z",
           "type": "string"
         },
         "has_more": {
+          "description": "`true` when IMDb lists more entries of this type than were returned.",
           "example": true,
           "type": "boolean"
         },
         "id": {
+          "description": "IMDb title ID, for example `tt1375666`.",
           "example": "tt1375666",
           "type": "string"
         },
         "keywords": {
+          "description": "Keywords tagged on the title. Filled when `type` is `keywords`.",
           "items": {
             "$ref": "#/definitions/imdb.KeywordItem"
           },
           "type": "array"
         },
         "locations": {
+          "description": "Filming locations of the title. Filled when `type` is `filming_locations`.",
           "items": {
             "$ref": "#/definitions/imdb.LocationItem"
           },
           "type": "array"
         },
         "public_page_derived": {
+          "description": "Always `true`. The data comes from IMDb's public pages.",
           "example": true,
           "type": "boolean"
         },
         "source_url": {
+          "description": "URL the data was read from.",
           "example": "https://www.imdb.com/title/tt1375666/trivia/",
           "type": "string"
         },
         "total": {
+          "description": "Number of entries IMDb lists for this type.",
           "example": 21,
           "type": "integer"
         },
         "type": {
+          "description": "Kind of data returned: `trivia`, `goofs`, `quotes`, `keywords`, `filming_locations` or `company_credits`.",
           "example": "trivia",
           "type": "string"
         },
         "url": {
+          "description": "IMDb page of the title for this kind of data.",
           "example": "https://www.imdb.com/title/tt1375666/trivia/",
           "type": "string"
         }
@@ -1929,26 +2113,31 @@
     "imdb.TitleResponse": {
       "properties": {
         "cast": {
+          "description": "Up to three lead cast members.",
           "items": {
             "$ref": "#/definitions/imdb.Person"
           },
           "type": "array"
         },
         "content_rating": {
+          "description": "Age rating shown for the title, for example `PG-13`.",
           "example": "PG-13",
           "type": "string"
         },
         "directors": {
+          "description": "Directors of the title.",
           "items": {
             "$ref": "#/definitions/imdb.Person"
           },
           "type": "array"
         },
         "fetched_at": {
+          "description": "Time the data was fetched, in UTC (RFC 3339).",
           "example": "2026-06-07T14:46:16Z",
           "type": "string"
         },
         "genres": {
+          "description": "Genres IMDb lists for the title.",
           "example": [
             "Action"
           ],
@@ -1958,56 +2147,70 @@
           "type": "array"
         },
         "id": {
+          "description": "IMDb title ID, for example `tt1375666`.",
           "example": "tt1375666",
           "type": "string"
         },
         "image_url": {
+          "description": "URL of the title's main image.",
           "type": "string"
         },
         "plot": {
+          "description": "Plot summary of the title.",
           "type": "string"
         },
         "popularity_rank": {
+          "description": "Current IMDb popularity rank of the title.",
           "example": 82,
           "type": "integer"
         },
         "public_page_derived": {
+          "description": "Always `true`. The data comes from IMDb's public pages.",
           "example": true,
           "type": "boolean"
         },
         "rating_count": {
+          "description": "Number of user ratings behind the rating value.",
           "example": 2600000,
           "type": "integer"
         },
         "rating_value": {
+          "description": "Average IMDb user rating of the title.",
           "example": 8.8,
           "type": "number"
         },
         "release_date": {
+          "description": "Release date of the title, for example `2010-07-16`.",
           "example": "2010-07-16",
           "type": "string"
         },
         "runtime_minutes": {
+          "description": "Running time of the title in minutes.",
           "example": 148,
           "type": "integer"
         },
         "source_url": {
+          "description": "URL the data was read from.",
           "example": "https://www.imdb.com/title/tt1375666/",
           "type": "string"
         },
         "title": {
+          "description": "Title name as shown on IMDb.",
           "example": "Inception",
           "type": "string"
         },
         "title_type": {
+          "description": "Kind of title, for example `Movie`.",
           "example": "Movie",
           "type": "string"
         },
         "url": {
+          "description": "IMDb page URL of the title.",
           "example": "https://www.imdb.com/title/tt1375666/",
           "type": "string"
         },
         "year": {
+          "description": "Release year of the title.",
           "example": "2010",
           "type": "string"
         }
@@ -2550,7 +2753,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized rows from public IMDb title charts. Chart values: `top_rated_movies`, `top_rated_tv_shows`, `most_popular_movies`, `most_popular_tv_shows`, `top_rated_english_movies`, `lowest_rated_movies`.",
+        "description": "Returns an IMDb title chart, chosen with `chart`: `top_rated_movies` (default), `top_rated_tv_shows`, `most_popular_movies`, `most_popular_tv_shows`, `top_rated_english_movies` or `lowest_rated_movies`. `limit` sets the rows (default 25, max 250). Each title has its rank, id, year, rating, rating count and credits.",
         "operationId": "imdb-charts",
         "parameters": [
           {
@@ -2674,7 +2877,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized public IMDb person metadata and known-for rows. Pass exactly one of `id` or `url`.",
+        "description": "Returns an IMDb person's profile. Pass exactly one of `id` (such as `nm0634240`) or `url`. The response has the name, biography, birth and death dates, birth place, professions, image and a known-for list of titles with year and credit category.",
         "operationId": "imdb-name",
         "parameters": [
           {
@@ -2749,7 +2952,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized public IMDb award rows for a person. Pass exactly one of `id` or `url`.",
+        "description": "Returns the awards IMDb lists for a person. Pass exactly one of `id` or `url`. Each row has the event, year, category, `win` or `nomination` result, award name, recipients and related titles. `total` is the count IMDb lists, and `has_more` is true when fewer rows are returned.",
         "operationId": "imdb-name-awards",
         "parameters": [
           {
@@ -2824,7 +3027,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized public IMDb filmography sections for a person. Pass exactly one of `id` or `url`.",
+        "description": "Returns a person's IMDb filmography, grouped into sections such as Actor, Director and Self. Pass exactly one of `id` or `url`. Each credit has its title, year, role and episode count. A section returns up to 100 credits, so `total` can exceed the rows returned.",
         "operationId": "imdb-name-credits",
         "parameters": [
           {
@@ -3080,7 +3283,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized IMDb title search rows from credential-free public IMDb pages. Limit defaults to 10 and clamps to 20.",
+        "description": "Searches IMDb titles by `query`, returning up to `limit` rows (default 10, max 20). Each result has the title id, title, URL, year, title type, image and a description holding the lead cast. A query with no matches returns an empty `results` list.",
         "operationId": "imdb-search",
         "parameters": [
           {
@@ -3156,7 +3359,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized IMDb advanced title-search results (imdb.com/search/title/) from a credential-free public IMDb page. At least one filter is required; sort/limit alone are not enough. Limit defaults to 25 and clamps to 50; only IMDb's first rendered page of results is returned (see `total`/`has_more`), there is no deeper cursor pagination. Genre/company/certificate/country/language/keyword/characters/role are include-only lists; there is no exclude support. Unsupported: genre exclude, three curated `groups` values (best-picture-nominee, best-director-nominee, national-film-registry), and the non-plot \"page topic\" search fields.",
+        "description": "Returns IMDb advanced title-search results (imdb.com/search/title/). At least one filter is required; sort/limit alone are not enough. Limit defaults to 25 and clamps to 50; only IMDb's first page of results is returned (see `total`/`has_more`), there is no deeper cursor pagination. Genre/company/certificate/country/language/keyword/characters/role are include-only lists; there is no exclude support. Unsupported: genre exclude, three curated `groups` values (best-picture-nominee, best-director-nominee, national-film-registry), and the non-plot \"page topic\" search fields.",
         "operationId": "imdb-search-title",
         "parameters": [
           {
@@ -3405,7 +3608,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized IMDb title metadata from a credential-free public IMDb title page. Pass exactly one of `id` or `url`.",
+        "description": "Returns an IMDb title's details. Pass exactly one of `id` (such as `tt1375666`) or `url`. The response has the title, type, year, release date, runtime, genres, plot, content rating, rating and count, popularity rank, directors and up to three lead cast. Rating and cast fields appear only when present.",
         "operationId": "imdb-title",
         "parameters": [
           {
@@ -3480,7 +3683,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized public IMDb award rows for a title. Pass exactly one of `id` or `url`.",
+        "description": "Returns the awards IMDb lists for a title. Pass exactly one of `id` or `url`. Each row has the event, year, category, `win` or `nomination` result, award name, recipients and notes. `total` is the number IMDb lists and `has_more` is true when only part is returned.",
         "operationId": "imdb-title-awards",
         "parameters": [
           {
@@ -3630,7 +3833,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized public IMDb company-credit sections for a title. Pass exactly one of `id` or `url`.",
+        "description": "Returns the company credits IMDb lists for a title, in sections such as production companies and distributors. Pass exactly one of `id` or `url`. Each company has its name, URL and a qualifier note. `total` is the count IMDb lists, so a short list is normal on popular titles.",
         "operationId": "imdb-title-company-credits",
         "parameters": [
           {
@@ -3787,7 +3990,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized public IMDb full cast and crew sections. Pass exactly one of `id` or `url`.",
+        "description": "Returns the full cast and crew IMDb lists for a title, in named sections. Pass exactly one of `id` or `url`. Each credit has a name, IMDb name URL, role and, for cast, the character. The cast returns up to 2,000 rows and other sections up to 100.",
         "operationId": "imdb-title-credits",
         "parameters": [
           {
@@ -3862,7 +4065,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized public IMDb episode rows for a series title. Limit defaults to 10 and clamps to 20. Optional `season` filters the upstream episodes page. Pass exactly one of `id` or `url`.",
+        "description": "Returns public IMDb episode rows for a series title. Limit defaults to 10 and clamps to 20. Optional `season` filters the episodes returned. Pass exactly one of `id` or `url`.",
         "operationId": "imdb-title-episodes",
         "parameters": [
           {
@@ -3951,7 +4154,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized public IMDb filming-location rows for a title. Pass exactly one of `id` or `url`.",
+        "description": "Returns the filming locations IMDb lists for a title. Pass exactly one of `id` or `url`. Each location has its text and an optional note. `total` is the count IMDb lists, `has_more` shows when the list is cut short, and a title with none returns an empty list with `total` 0.",
         "operationId": "imdb-title-filming-locations",
         "parameters": [
           {
@@ -4026,7 +4229,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized public IMDb goof rows for a title. Pass exactly one of `id` or `url`.",
+        "description": "Returns the goofs IMDb lists for a title. Pass exactly one of `id` or `url`. Each entry in `facts` has the text, a `spoiler` flag and, when IMDb groups it, a category such as Continuity. `total` is the count IMDb lists and `has_more` is true when only part is returned.",
         "operationId": "imdb-title-goofs",
         "parameters": [
           {
@@ -4200,7 +4403,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized public IMDb keyword rows for a title. Pass exactly one of `id` or `url`.",
+        "description": "Returns the plot keywords IMDb lists for a title. Pass exactly one of `id` or `url`. Each keyword has its text and an IMDb search URL for that keyword. `total` is the count IMDb lists, so a short list is normal on popular titles.",
         "operationId": "imdb-title-keywords",
         "parameters": [
           {
@@ -4275,7 +4478,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized public IMDb parental-guide categories and severity signals. Pass exactly one of `id` or `url`.",
+        "description": "Returns the IMDb parental guide for a title. Pass exactly one of `id` or `url`. Categories such as violence, profanity and frightening scenes carry a severity of `none`, `mild`, `moderate` or `severe` and the guide text. A `summary` gives counts and the highest severity. Spoiler items are excluded.",
         "operationId": "imdb-title-parental-guide",
         "parameters": [
           {
@@ -4425,7 +4628,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized public IMDb quote rows for a title. Pass exactly one of `id` or `url`.",
+        "description": "Returns the quotes IMDb lists for a title. Pass exactly one of `id` or `url`. Each entry in `facts` is a whole exchange, with lines prefixed by the speaker, plus a `spoiler` flag. `total` is the count IMDb lists, so a short list is normal on popular titles.",
         "operationId": "imdb-title-quotes",
         "parameters": [
           {
@@ -4557,7 +4760,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized public IMDb release date rows and alternate titles. Pass exactly one of `id` or `url`.",
+        "description": "Returns the release dates and alternate titles IMDb lists for a title. Pass exactly one of `id` or `url`. Releases have a country, date and note; alternate titles have a country, title and type. Both lists are often shorter than `total` and `alternate_titles_total`.",
         "operationId": "imdb-title-release-info",
         "parameters": [
           {
@@ -4632,7 +4835,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized public IMDb user review rows. Limit defaults to 10 and clamps to 20. Pass exactly one of `id` or `url`.",
+        "description": "Returns public IMDb user review rows. Limit defaults to 10 and clamps to 20. Pass exactly one of `id` or `url`.",
         "operationId": "imdb-title-reviews",
         "parameters": [
           {
@@ -4714,7 +4917,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized titles from IMDb's public More like this recommendations. Pass exactly one of `id` or `url`.",
+        "description": "Returns the titles in IMDb's More like this recommendations for a title. Pass exactly one of `id` (such as `tt0111161`) or `url`. Each title has its id, name, URL, year, type, runtime, content rating, rating, rating count and image.",
         "operationId": "imdb-title-similar",
         "parameters": [
           {
@@ -4771,7 +4974,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized public IMDb technical specifications such as runtime, sound mix, color, and aspect ratio. Pass exactly one of `id` or `url`.",
+        "description": "Returns public IMDb technical specifications such as runtime, sound mix, color, and aspect ratio. Pass exactly one of `id` or `url`.",
         "operationId": "imdb-title-technical-specs",
         "parameters": [
           {
@@ -4846,7 +5049,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized public IMDb trivia rows for a title. Pass exactly one of `id` or `url`.",
+        "description": "Returns the trivia IMDb lists for a title. Pass exactly one of `id` or `url`. Each entry in `facts` has the text, a `spoiler` flag and, for grouped items, a category such as Director Trademark. `total` is the count IMDb lists and `has_more` is true when only part is returned.",
         "operationId": "imdb-title-trivia",
         "parameters": [
           {

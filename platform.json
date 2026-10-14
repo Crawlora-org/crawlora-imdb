@@ -1,50 +1,57 @@
 {
   "async_class_name": "AsyncIMDbClient",
   "class_name": "IMDbClient",
-  "contract_revision": "sha256:2f96f0b8f5094ee2366e03038a2840bce6fbe2c09fb7d0ea464de89f1f42f013",
+  "contract_revision": "sha256:3377b774bff0bdc3a1939c8a81b9d62c3a2e846a741435145586f6cc3885396c",
   "display_name": "IMDb",
   "general_sdk_version": "1.46.0-sdk.1",
   "golang_module_name": "github.com/Crawlora-org/crawlora-imdb",
-  "golang_version": "0.1.2",
+  "golang_version": "0.2.0",
   "group_name": "imdb",
   "java_description": "Java client for Crawlora's hosted IMDb API, with title and name search, charts, ratings, credits, awards, episodes, reviews, images, and title metadata. Requires a Crawlora API key.",
   "maven_artifact_id": "crawlora-imdb",
   "maven_group_id": "net.crawlora",
   "module_name": "crawlora_imdb",
   "npm_name": "@crawlora-org/imdb",
+  "php_history": "# Changelog\n\n## 0.1.1\n\n- Align generated IMDb client package versions for the next release.\n\n## 0.1.0\n\n- Initial focused IMDb PHP client for Crawlora's hosted API.",
   "php_package_name": "crawlora/imdb",
   "php_repository": "https://github.com/Crawlora-org/crawlora-imdb",
   "platform": "imdb",
   "python_name": "crawlora-imdb",
-  "repository": "https://github.com/Crawlora-org/crawlora-imdb",
-  "ruby_gem_name": "crawlora-imdb",
-  "source_contract_sha256": "6ce716c52b7f17a1ab0960cdaefaeb1b40b71c25ad41be55e80b8b0910624f9d",
-  "version": "0.1.2",
   "releases": [
     {
-      "version": "0.1.2",
-      "date": "2026-10-12",
+      "changes": [
+        "Updated operation contracts: imdb-charts, imdb-name, imdb-name-awards, imdb-name-credits, imdb-search, imdb-search-title, imdb-title, imdb-title-awards, imdb-title-company-credits, imdb-title-credits, imdb-title-episodes, imdb-title-filming-locations, imdb-title-goofs, imdb-title-keywords, imdb-title-parental-guide, imdb-title-public-facts-analysis, imdb-title-quotes, imdb-title-release-info, imdb-title-reviews, imdb-title-similar, imdb-title-technical-specs, imdb-title-trivia."
+      ],
+      "date": "2026-10-14",
+      "version": "0.2.0"
+    },
+    {
       "changes": [
         "List every supported endpoint in the repository and package READMEs.",
         "Add platform-specific search keywords to the npm, PyPI, and Composer package metadata."
-      ]
+      ],
+      "date": "2026-10-12",
+      "version": "0.1.2"
     },
     {
-      "version": "0.1.1",
-      "date": "2026-10-09",
       "changes": [
         "Align generated IMDb client package versions for the next release."
-      ]
+      ],
+      "date": "2026-10-09",
+      "version": "0.1.1"
     },
     {
-      "version": "0.1.0",
-      "date": "2026-10-07",
       "changes": [
         "Initial IMDb JavaScript and Python clients for Crawlora's hosted API.",
         "Includes promise-based JavaScript and synchronous/asynchronous Python interfaces, generated from contract revision `sha256:2f96f0b8f5094ee2366e03038a2840bce6fbe2c09fb7d0ea464de89f1f42f013`."
-      ]
+      ],
+      "date": "2026-10-07",
+      "version": "0.1.0"
     }
   ],
-  "php_history": "# Changelog\n\n## 0.1.1\n\n- Align generated IMDb client package versions for the next release.\n\n## 0.1.0\n\n- Initial focused IMDb PHP client for Crawlora's hosted API.",
-  "ruby_history": "# Changelog\n\n## 0.1.1\n\n- Align generated IMDb client package versions for the next release.\n\n## 0.1.0\n\n- Initial focused IMDb Ruby client for Crawlora's hosted API."
+  "repository": "https://github.com/Crawlora-org/crawlora-imdb",
+  "ruby_gem_name": "crawlora-imdb",
+  "ruby_history": "# Changelog\n\n## 0.1.1\n\n- Align generated IMDb client package versions for the next release.\n\n## 0.1.0\n\n- Initial focused IMDb Ruby client for Crawlora's hosted API.",
+  "source_contract_sha256": "58a42b604ca03b9d6cf27355e0e56f34719985b905a61df2f9f2a8c55f651f74",
+  "version": "0.2.0"
 }

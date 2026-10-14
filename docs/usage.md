@@ -2,7 +2,7 @@
 
 This reference lists all 30 public IMDb API endpoints exposed by the `@crawlora-org/imdb` and `crawlora-imdb` packages, covering title and name search, charts, ratings, credits, awards, episodes, reviews, images, and title metadata. The clients call Crawlora's hosted API. Set `CRAWLORA_API_KEY` to a key for your Crawlora account before making requests. Service usage is billed under that account. These clients do not run a browser or scrape IMDb locally; Crawlora is independent from and not endorsed by IMDb or its owners.
 
-The package tracks the public API contract revision `sha256:2f96f0b8f5094ee2366e03038a2840bce6fbe2c09fb7d0ea464de89f1f42f013` bundled with release `0.1.2`. Maintainers can preview daily contract updates with the repository's `Sync live API contract` workflow; unchanged contracts do not produce package releases.
+The package tracks the public API contract revision `sha256:3377b774bff0bdc3a1939c8a81b9d62c3a2e846a741435145586f6cc3885396c` bundled with release `0.2.0`. Maintainers can preview daily contract updates with the repository's `Sync live API contract` workflow; unchanged contracts do not produce package releases.
 
 Both packages expose all 30 operations in the bundled API contract. JavaScript uses camelCase methods and Python uses snake_case methods. Methods also remain available through the `imdb` group and the generated `Client` alias.
 

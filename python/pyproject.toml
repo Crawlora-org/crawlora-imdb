@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "crawlora-imdb"
-version = "0.1.2"
+version = "0.2.0"
 description = "Crawlora IMDb API client with 30 endpoints for title and name search, charts, ratings, credits, awards, episodes, reviews, images, and title metadata"
 readme = "README.md"
 keywords = ["crawlora", "api-client", "sdk", "web-scraping", "scraping-api", "imdb", "imdb-api", "imdb-scraper", "imdb-data", "imdb-title-name-search", "imdb-charts", "imdb-ratings", "imdb-credits", "imdb-awards", "imdb-episodes", "imdb-reviews", "imdb-images", "imdb-title-metadata"]
